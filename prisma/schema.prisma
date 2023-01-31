@@ -9,8 +9,8 @@ datasource db {
 
 model posts {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
-  Description String
   Title       String
   markdown    String
+  Description String
   slug        String
 }
