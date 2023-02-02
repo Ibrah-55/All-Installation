@@ -22,7 +22,6 @@ function Posts() {
                     <li className="postList" key={post.slug}>
                         <Link className="postTitle" to={post.slug}>{post.Title}</Link>
                       <br />  
-                      <br />
                     </li>
                 )) }
             </ul>
