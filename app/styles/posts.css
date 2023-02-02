@@ -1,3 +1,4 @@
+
 .postTitle{
     text-decoration: none;
     color: rebeccapurple;
@@ -15,7 +16,6 @@
 .postDisplay  h1, h2, h3 {
     font-size: 72px;
     background: -webkit-linear-gradient(rgb(0, 255, 64), rgb(0, 71, 204));
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
