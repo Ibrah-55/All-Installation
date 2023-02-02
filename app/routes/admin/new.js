@@ -9,17 +9,19 @@ export let action = async ({ request }) => {
     let Title = formData.get("Title");
     let slug = formData.get("slug")
     let markdown = formData.get("markdown")
+    let Description = formData.get("Description")
 
     let errors = {};
     if (!Title) errors.Title = true;
     if (!slug) errors.slug = true;
     if (!markdown) errors.markdown = true;
+    if(!Description) errors.Description = true;
     
     if (Object.keys(errors).length) {
         return errors;
     }
 
-    await createPost({Title, slug, markdown});
+    await createPost({Title, slug, Description, markdown});
 
     return redirect("/admin")
 }
@@ -46,15 +48,20 @@ export default function NewPost() {
                 <label htmlFor=""> Post Slug: {" "} {errors?.slug && <em>Slug is required</em>} 
                 <input placeholder={slug} id="slugInput" type="text" name="slug"/>
             </label>
-            </p>
             <p>
-                <label htmlFor="markdown">Markdown:</label>{" "} {errors?.markdown && <em>Markdown is required</em>} 
+                <label htmlFor="">Description:</label>{" "} {errors?.Description && <em>Write a Description</em>} 
                 <br />
-                <textarea name="markdown" id="" rows={20} cols={30}/>
+                <input name="Description" id="" type="text"/>
+            </p>
             </p>
             <p>
-                <button type="submit">{transition.submission ? "Creating..." : "Create Post"}</button>
+                <label htmlFor="markdown">Installation </label>{" "} {errors?.markdown && <em>Installation is Required</em>} 
+                <br />
+                <textarea name="markdown" id=""/>
+            </p>
+            <p>
+                <button type="submit" >{transition.submission ? "Creating..." : "Create Post"}</button>
             </p>
       </Form>
   )
-} 
+}

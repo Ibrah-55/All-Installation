@@ -39,7 +39,7 @@ export let loader = () => {
 
 export let meta = () => {
   return {
-    title: "Remix Starter",
+    Title: "Remix Starter",
     description: "Welcome to remix!"
   };
 };
@@ -51,7 +51,7 @@ export default function Index() {
     <div className="remix__page">
       <main>
         <h2>Welcome to Remix!</h2>
-        <p>We're stoked that you're here. 🥳</p>
+        <p>We're stoked that you're here.</p>
         <p>
           Feel free to take a look around the code to see how Remix does things,
           it might be a bit different than what you’re used to. When you're

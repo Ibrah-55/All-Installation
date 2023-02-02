@@ -15,6 +15,7 @@ export let action = async ({ request }) => {
 
     let Title = formData.get("Title");
     let slug = formData.get("slug")
+    let Description = formData.get("Description")
     let markdown = formData.get("markdown")
     let id = formData.get("id");
 
@@ -22,13 +23,13 @@ export let action = async ({ request }) => {
     if (!Title) errors.Title = true;
     if (!slug) errors.slug = true;
     if (!markdown) errors.markdown = true;
-    
+    if (!Description) errors.Description = true;
     if (Object.keys(errors).length) {
         return errors;
     }
 
-    console.log('calling updatePost with id, Title, slug, markdown: ', id, Title, slug, markdown)
-    await updatePost({id, Title, slug, markdown});
+    console.log('calling updatePost with id, Title, slug, markdown: ', id, Title, slug,Description, markdown)
+    await updatePost({id, Title, slug, Description, markdown});
 
     return redirect("/admin")
 }
@@ -54,10 +55,16 @@ export default function PostSlug() {
                   </label>
                   </p>
                   <p>
-                      <label htmlFor="markdown">Markdown:</label>{" "} {errors?.markdown && <em>Markdown is required</em>} 
-                      <br />
-                      <textarea defaultValue={post.markdown} name="markdown" id="" rows={20} cols={30}/>
-                  </p>
+                <label htmlFor="">Description:</label>{" "} {errors?.Description && <em>Write a Description</em>} 
+                <br />
+                <input name="Description" id="" type="text"/>
+            </p>
+            </p>
+            <p>
+                <label htmlFor="markdown">Installation </label>{" "} {errors?.markdown && <em>Installation is Required</em>} 
+                <br />
+                <textarea name="markdown" id=""/>
+            </p>
                   <p>
                       <button type="submit">{transition.submission ? "Updating..." : "Update Post"}</button>
                   </p>

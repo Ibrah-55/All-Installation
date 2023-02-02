@@ -1,7 +1,11 @@
 import React from 'react'
-import { getPosts } from 'post'
+import { getPosts} from 'post'
 import { Link, useLoaderData } from '@remix-run/react';
 
+import postStyles from "~/styles/posts.css";
+export let links = () => {
+    return [{rel: "stylesheet", href: postStyles}]
+} 
 
 export let loader = () =>{
   return getPosts();

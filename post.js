@@ -13,11 +13,12 @@ export async function getPost(slug){
         }
     })
     let id = foundSlug.id
-    let title = foundSlug.Title;
+    let Title = foundSlug.Title;
+    let Description = foundSlug.Description;
     let html = marked(foundSlug.markdown)
     prisma.$disconnect();
 
-    return { id, slug, title, html};
+    return { id, slug, Title,Description, html};
 }
 
 export async function getPostEdit(slug){
@@ -29,19 +30,21 @@ export async function getPostEdit(slug){
         }
     })
     let id = foundSlug.id
-    let title = foundSlug.Title;
+    let Title = foundSlug.Title;
+    let Description = foundSlug.Description;
     let markdown = foundSlug.markdown
     prisma.$disconnect();
 
-    return { id, slug, title, markdown};
+    return { id, slug, Title,Description, markdown};
 }
 
 export async function createPost(post){
     await prisma.$connect()
     await prisma.posts.create({
         data: {
-            title: post.Title,
+            Title: post.Title,
             slug: post.slug,
+            Description: post.Description,
             markdown: post.markdown
         }
     })
@@ -58,8 +61,9 @@ export async function updatePost(post){
             id: post.id
         },
         data: {
-            title: post.Title,
+            Title: post.Title,
             slug: post.slug,
+            Description: post.Description,
             markdown: post.markdown
         }
     })

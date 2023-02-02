@@ -4,7 +4,7 @@ import stylesUrl from "~/styles/demos/about.css";
 
 export let meta = () => {
   return {
-    title: "About Remix"
+    Title: "About Remix"
   };
 };
 

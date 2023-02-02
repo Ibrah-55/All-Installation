@@ -3,7 +3,7 @@ import { Form, useActionData } from "@remix-run/react";
 import { json, redirect } from "@remix-run/node";
 
 export function meta() {
-  return { title: "Actions Demo" };
+  return { Title: "Actions Demo" };
 }
 
 
