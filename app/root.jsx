@@ -39,7 +39,7 @@ export function ErrorBoundary({ error }) {
     <Document Title="Error!">
       <Layout>
         <div>
-          <h1>There was an error</h1>
+          <h1>Experienced an  error</h1>
           <p>{error.message}</p>
           <hr />
           <p>
@@ -66,7 +66,7 @@ export function CatchBoundary() {
       break;
     case 404:
       message = (
-        <p>Oops! Looks like you tried to visit a page that does not exist.</p>
+        <p>Oops! Page does not exist.</p>
       );
       break;
 
@@ -109,7 +109,7 @@ function Document({ children, Title }) {
 function Layout({ children }) {
   return (
     <div className="remix-app">
-      <header className="remix-app__header">
+      {/* <header className="remix-app__header">
         <div className="container remix-app__header-content">
           <nav aria-label="Main navigation" className="remix-app__header-nav">
             <ul>
@@ -121,7 +121,7 @@ function Layout({ children }) {
               </li>
               <li>
                 {/* <Link to="/admin">Admin</Link> */}
-              </li>
+              {/* </li>
               <li>
               </li>
               <li>
@@ -129,13 +129,13 @@ function Layout({ children }) {
             </ul>
           </nav>
         </div>
-      </header>
+      </header> */} 
       <div className="remix-app__main">
         <div className="container remix-app__main-content">{children}</div>
       </div>
       <footer className="remix-app__footer">
         <div className="container remix-app__footer-content">
-          <p>&copy; Jarvis</p>
+          <p>&copy; Jarvis 2023</p>
         </div>
       </footer>
     </div>
