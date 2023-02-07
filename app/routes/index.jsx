@@ -69,14 +69,14 @@ export let loader = () => {
         to: "demos/actions",
         name: "Actions"
       },
-      {
-        to: "demos/about",
-        name: "Nested Routes, CSS loading/unloading"
-      },
-      {
-        to: "demos/params",
-        name: "URL Params and Error Boundaries"
-      }
+      // {
+      //   to: "demos/about",
+      //   name: "Nested Routes, CSS loading/unloading"
+      // },
+      // {
+      //   to: "demos/params",
+      //   name: "URL Params and Error Boundaries"
+      // }
     ], 
   };
 
@@ -101,9 +101,7 @@ export default function Index() {
       <main>
         <h2>Welcome to OneDocs!</h2>
 
-        <button className="button" type="submit">
-                <Link to="/blogs">{transitions.submission ? "Hang on..." : "Get Started"}</Link>
-             </button>  
+  
         <p>
           Get all installation guidelines in one page.
           Available installation for         
@@ -155,7 +153,7 @@ export default function Index() {
         
    
         </ul>
-        <button className="button2" type="">
+        <button className="button" type="">
                 <Link to="/blogs">{transitions.submission ? "Hang on..." : "All documentations"}</Link>
              </button> 
          

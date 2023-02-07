@@ -6,14 +6,16 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useCatch
+  useCatch,
+  
 } from "@remix-run/react";
-
 import globalStylesUrl from "~/styles/global.css";
 import darkStylesUrl from "~/styles/dark.css";
+import styles from '~/styles/app.css';
 
 export let links = () => {
   return [
+    { rel: "stylesheet", href: styles },
     { rel: "stylesheet", href: globalStylesUrl },
     {
       rel: "stylesheet",
@@ -106,10 +108,15 @@ function Document({ children, Title }) {
   );
 }
 
+
+
+
 function Layout({ children }) {
+
+
   return (
     <div className="remix-app">
-      {/* <header className="remix-app__header">
+       <header className="remix-app__header">
         <div className="container remix-app__header-content">
           <nav aria-label="Main navigation" className="remix-app__header-nav">
             <ul>
@@ -117,19 +124,19 @@ function Layout({ children }) {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/blogs">Blogs</Link>
+                <Link to="/blogs">Docs</Link>
               </li>
               <li>
-                {/* <Link to="/admin">Admin</Link> */}
-              {/* </li>
+                {/* { <Link to="/admin">Admin</Link> */}
+             </li>
+             
               <li>
-              </li>
-              <li>
+             
               </li>
             </ul>
           </nav>
         </div>
-      </header> */} 
+      </header> 
       <div className="remix-app__main">
         <div className="container remix-app__main-content">{children}</div>
       </div>

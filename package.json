@@ -3,9 +3,9 @@
   "sideEffects": false,
   "scripts": {
     "build": "npm run build:css && remix build",
-    "build:css": "tailwindcss -o ./app/tailwind.css",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
     "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
-    "dev:css": "tailwindcss -o ./app/tailwind.css --watch",
+    "dev:css": "tailwindcss -w -o ./app/styles/app.css",
     "postinstall": "remix setup node",
     "start": "remix-serve build"
   },
@@ -20,6 +20,7 @@
     "@remix-run/vercel": "^1.11.1",
     "@vercel/node": "^2.6.2",
     "babel-plugin-macros": "^3.1.0",
+    "bcryptjs": "^2.4.3",
     "marked": "^4.2.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -29,6 +30,7 @@
     "@remix-run/dev": "^1.11.1",
     "@remix-run/eslint-config": "^1.11.1",
     "@remix-run/serve": "^1.11.1",
+    "@types/bcryptjs": "^2.4.2",
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
     "eslint": "^8.27.0",

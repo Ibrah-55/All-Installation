@@ -98,9 +98,7 @@
     margin-left: auto;
   }
   
-  /*
-   * You probably want to just delete this file; it's just for the demo pages.
-   */
+ 
   .remix-app {
     display: flex;
     flex-direction: column;
@@ -147,8 +145,8 @@
   }
   
   .remix-app__footer {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
     border-top: 1px solid var(--color-border);
   }
   
@@ -225,8 +223,8 @@
     border:none; 
     border-radius:10px; 
     padding:15px;
-    min-height:30px; 
-    min-width: 120px;
+    min-height:20px; 
+    min-width: 100px;
   }
   
   .button span {

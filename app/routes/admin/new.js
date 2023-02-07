@@ -1,6 +1,8 @@
 import {  Form, useActionData, useTransition } from "@remix-run/react";
 import { createPost } from "post";
 import { redirect } from "@remix-run/node";
+import React from "react";
+
 
 
 export let action = async ({ request }) => {
