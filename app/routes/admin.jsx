@@ -26,7 +26,7 @@ export default function Admin() {
                         </li>
                     ))}
                 </ul>
-                <main>
+                <main>  
                     <Outlet />
                 </main>
             </nav>

@@ -59,7 +59,6 @@ export default function PostSlug() {
                 <br />
                 <input name="Description" id="" type="text"/>
             </p>
-            </p>
             <p>
                 <label htmlFor="markdown">Installation </label>{" "} {errors?.markdown && <em>Installation is Required</em>} 
                 <br />
@@ -70,4 +69,4 @@ export default function PostSlug() {
                   </p>
             </Form>
         )
-}
+}                                                                                                

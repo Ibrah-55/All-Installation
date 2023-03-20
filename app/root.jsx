@@ -12,7 +12,7 @@ import {
 import globalStylesUrl from "~/styles/global.css";
 import darkStylesUrl from "~/styles/dark.css";
 import styles from '~/styles/app.css';
-
+import React from "react";
 export let links = () => {
   return [
     { rel: "stylesheet", href: styles },
@@ -113,7 +113,8 @@ function Document({ children, Title }) {
 
 function Layout({ children }) {
 
-
+  // const [user, setUser] = React.useState(null);
+  // const handleLogin = () => setUser({id:1, name: 'Genesis'})
   return (
     <div className="remix-app">
        <header className="remix-app__header">

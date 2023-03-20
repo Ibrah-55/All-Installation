@@ -1,4 +1,4 @@
-import { useLoaderData, Link, Form, useActionData, useTransition } from "@remix-run/react";
+import { useLoaderData, Link, useTransition } from "@remix-run/react";
 import { json } from "@remix-run/node";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -69,14 +69,7 @@ export let loader = () => {
         to: "demos/actions",
         name: "Actions"
       },
-      // {
-      //   to: "demos/about",
-      //   name: "Nested Routes, CSS loading/unloading"
-      // },
-      // {
-      //   to: "demos/params",
-      //   name: "URL Params and Error Boundaries"
-      // }
+     
     ], 
   };
 
