@@ -1,7 +1,0 @@
-[
-{"id":"641c1d5331acb2d0fc9f6538","Title":"Npm Installation","markdown":"Install Node","Description":"Npm Installation","slug":"npm-installation","status":"Updated","level":"Easy"},
-
- {"id":"641cc8cad1d9a3fec348f85e","Title":"Python Installation","markdown":"Python is...","Description":"How to Install Python","slug":"python-installation","status":"Updating","level":"Medium"},
-
- {"id":"641cd208d1d9a3fec348f8e1","Title":"Node Installation","markdown":"Install Node","Description":"How to Install Node","slug":"node-installation","status":"Deprecated","level":"Hard"}
-]
